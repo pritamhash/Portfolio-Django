@@ -77,8 +77,8 @@
     <div class="container">
 
       <div class="row">
-
-        {% for job in jobs.all %}
+{% if jobs %}
+        {% for job in jobs %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <svg class="bd-placeholder-img card-img-top" src="{{ job.image.url }}" />
@@ -94,7 +94,9 @@
             </div>
           </div>
 
-          {% endfor    %}
+          {% endfor %}
+          
+          {% endif %}
 
 
         </div>
